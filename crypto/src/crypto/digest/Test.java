@@ -6,7 +6,7 @@ import java.security.MessageDigest;
 
 import crypto.util.UtilCrypto;
 
-public class Generador {
+public class Test {
 	public static void main(String[] args) throws Exception {
 		MessageDigest mdMd5 = MessageDigest.getInstance("MD5");
 		MessageDigest mdSha1 = MessageDigest.getInstance("SHA-1");

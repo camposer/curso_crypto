@@ -10,7 +10,7 @@ import java.util.Map;
 
 import crypto.util.UtilCrypto;
 
-public class Generador {
+public class Test {
 	public static void main(String[] args) throws Exception {
 		File[] ficheros = new File[] {
 				new File("tmp/quijote.txt"),

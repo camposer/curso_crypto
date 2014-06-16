@@ -12,3 +12,15 @@ http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec
 - Java ™ Cryptography Architecture Standard Algorithm Name Documentation
 http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.html
 
+Algoritmos
+----------
+
+- Generación de claves aleatorias: SHA1PRNG (basado en SHA-1)
+- Generación de resúmenes: SHA-1, MD5
+- Cifrado simétrico: AES, 3DES y DES (ya en desuso)
+- Cifrado asimétrico: RSA, DSA, DiffieHellman. Longitudes de clave de 256, 521, 1024
+
+
+
+
+

@@ -2,7 +2,7 @@ package crypto.random;
 
 import java.security.SecureRandom;
 
-public class Generador {
+public class Test {
 	public static void main(String[] args) throws Exception {
 		SecureRandom sr = SecureRandom.getInstance("SHA1PRNG"); // => Algoritmo/Modo/Padding
 		sr.setSeed(1L);
