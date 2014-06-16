@@ -22,25 +22,28 @@ public class TestSKC {
 		// 2.- Cifrando
 		Cipher cipher = Cipher.getInstance("AES");
 		cipher.init(Cipher.ENCRYPT_MODE, key);
-		//cipher.update();
 		byte[] cifrado = cipher.doFinal(Files.readAllBytes(fichero.toPath()));
 		
 		System.out.println(UtilCrypto.toHex(cifrado));
 		Files.write(
 				new File(nombreFichero + ".cifrado").toPath(), 
 				cifrado, 
-				StandardOpenOption.TRUNCATE_EXISTING);
+				StandardOpenOption.CREATE);
 
 		System.out.println();
 		
 		// 3.- Descifrando
 		cipher.init(Cipher.DECRYPT_MODE, key);
-		//cipher.update();
 		byte[] descifrado = cipher.doFinal(cifrado);
 		System.out.println(new String(descifrado));
 		Files.write(
 				new File(nombreFichero + ".descifrado").toPath(), 
 				descifrado, 
-				StandardOpenOption.TRUNCATE_EXISTING);
+				StandardOpenOption.CREATE);
 	}
 }
+
+
+
+
+
