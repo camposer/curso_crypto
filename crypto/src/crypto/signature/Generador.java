@@ -10,7 +10,10 @@ import crypto.util.UtilCrypto;
 
 public class Generador {
 	public static void main(String[] args) throws Exception {
-		File fichero = new File("tmp/quijote.txt");
+		File[] ficheros = new File[] {
+				new File("tmp/quijote.txt"),
+				new File("tmp/loremipsum.txt"),
+			};
 
 		// 1.- Generar claves públicas y privadas
 		KeyPairGenerator kpg = KeyPairGenerator
@@ -18,12 +21,15 @@ public class Generador {
 		
 		KeyPair kpair = kpg.generateKeyPair(); // par de claves
 		
-		// 1.- Firmando el documento
-		Signature sig = Signature.getInstance("SHA1withRSA");
-		sig.initSign(kpair.getPrivate()); // Firmando!
-		sig.update(Files.readAllBytes(fichero.toPath()));
-		byte[] firma = sig.sign();
-		System.out.println(UtilCrypto.toHex(firma));
+		// 1.- Firmando documentos
+		for (File f : ficheros) {
+			Signature sig = Signature.getInstance("SHA1withRSA");
+			sig.initSign(kpair.getPrivate()); // Firmando!
+			sig.update(Files.readAllBytes(f.toPath()));
+			byte[] firma = sig.sign();
+			System.out.println("Firma de " + f + ": " +
+					UtilCrypto.toHex(firma));
+		}
 		
 		
 		
