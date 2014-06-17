@@ -29,6 +29,9 @@ Agenda
 Enlaces
 -------
 
+- Java SE Security
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html
+
 - Java ™ Cryptography Architecture (JCA) Reference Guide
 http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html
 
@@ -37,6 +40,38 @@ http://docs.oracle.com/javase/6/docs/technotes/guides/security/StandardNames.htm
 
 - Java AES and using my own Key
 http://stackoverflow.com/questions/3451670/java-aes-and-using-my-own-key
+
+- X.509 Certificates and Certificate Revocation Lists (CRLs)
+http://docs.oracle.com/javase/8/docs/technotes/guides/security/cert3.html
+
+- X.509
+http://es.wikipedia.org/wiki/X.509
+
+- DER vs. CRT vs. CER vs. PEM Certificates and How To Convert Them
+https://support.ssl.com/Knowledgebase/Article/View/19/0/der-vs-crt-vs-cer-vs-pem-certificates-and-how-to-convert-them
+https://www.sslshopper.com/ssl-converter.html
+
+- Keytool
+http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/keytool.html
+
+- To Use keytool to Create a Server Certificate
+http://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html
+
+- Java PKI Programmer's Guide
+http://docs.oracle.com/javase/8/docs/technotes/guides/security/certpath/CertPathProgGuide.html
+
+- Access Control Mechanisms and Algorithms
+http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc4.html#a20389
+http://stackoverflow.com/questions/8703234/accesscontroller-usage
+
+- Security Management
+http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc6.html#a19349
+
+- Permissions and Security Policies
+http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc3.html#a19802
+
+- JRMI
+http://docs.oracle.com/javase/tutorial/rmi/
 
 Algoritmos
 ----------
