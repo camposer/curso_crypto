@@ -73,6 +73,9 @@ http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spe
 - JRMI
 http://docs.oracle.com/javase/tutorial/rmi/
 
+- Using the SSL/TLS-based RMI Socket Factories in J2SE 5.0 
+https://blogs.oracle.com/lmalventosa/entry/using_the_ssl_tls_based
+
 Algoritmos
 ----------
 
