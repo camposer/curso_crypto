@@ -70,6 +70,9 @@ http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spe
 - Permissions and Security Policies
 http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc3.html#a19802
 
+- Autenticación SSL de dos vías
+http://publib.boulder.ibm.com/infocenter/tivihelp/v5r1/index.jsp?topic=%2Fcom.ibm.itim.infocenter.doc%2Fcpt%2Fcpt_ic_security_ssl_authent2way.html
+
 - JRMI
 http://docs.oracle.com/javase/tutorial/rmi/
 
