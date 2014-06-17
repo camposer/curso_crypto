@@ -1,0 +1,14 @@
+Comandos utilizados
+===================
+
+1.- Para generar keystore:
+	$ keytool -genkeypair -keystore keystore.jks
+
+2.- Para generar petición de certificado
+	$ keytool -certreq -file Cert1.csr -keystore keystore.jks
+
+3.- Para importar un certificado al keystore
+	$ keytool -importcert -keystore keystore.jks -alias twitter -file ~/twitter.com.pem 
+
+4.- Para consultar el keystore
+	$ keytool -list -keystore keystore.jks 
