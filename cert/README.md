@@ -18,13 +18,8 @@ Comandos utilizados
 5.- Generar un certificado auto-firmado (lo almacena dentro del keystore)
 	$ keytool -genkey -alias mycert -keyalg RSA -keystore keystore.jks
 
-6.- Extraer (exportar) el certificado del keystore
-	$ keytool -exportcert -keystore keystore.jks -alias mycert -file mycert.p12
+5.- Extraer certificados (exportar) del keystore 
+	$ keytool -export -alias mycert -keystore keystore.jks -file mycert.cer
 
-
-
-
-
-
-
-
+7.- Extraer certificados del keystore JKS e importar keystore PKCS12
+	$ keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.p12 -srcstoretype JKS -deststoretype PKCS12 
