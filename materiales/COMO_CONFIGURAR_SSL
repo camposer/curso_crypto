@@ -1,5 +1,8 @@
-COMO CONFIGURAR JRMI CON SSL 1-way
-==================================
+COMO CONFIGURAR JRMI CON SSL
+============================
+
+1-way
+-----
 
 0.- Crear carpeta dentro del proyecto donde se almacenarán los almacenes (Ej. stores)
 
@@ -20,4 +23,15 @@ COMO CONFIGURAR JRMI CON SSL 1-way
 5.- Ejecutar clase cliente con los siguientes VM arguments:
 -Djavax.net.ssl.trustStore=stores/truststore.ts -Djavax.net.ssl.trustStorePassword=123456
 	
+2-way
+-----
+
+>  keytool -genkeypair -alias servidor -keystore keystore-servidor.jks
+>  keytool -list -keystore keystore-servidor.jks 
+>  keytool -exportcert -keystore keystore-servidor.jks -alias servidor -file servidor.cer
+>  keytool -import -trustcacerts -alias servidor -file servidor.cer -keystore truststore-cliente.ts
+>  keytool -genkeypair -alias cliente -keystore keystore-cliente.jks
+>  keytool -list -keystore keystore-cliente.jks 
+>  keytool -exportcert -keystore keystore-cliente.jks -alias cliente -file cliente.cer
+>  keytool -import -trustcacerts -alias cliente -file cliente.cer -keystore truststore-servidor.ts
 

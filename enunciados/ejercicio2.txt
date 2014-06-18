@@ -1,4 +1,4 @@
-Implementar una calculadora de números decimales con JRMI. A continuación la definición de la interfaz remota:
+1.- Implementar una calculadora de números decimales con JRMI. A continuación la definición de la interfaz remota:
 
 public interface Calculadora implements Remote {
 	public Float sumar(Float a, Float b) throws RemoteException;
@@ -11,5 +11,28 @@ Implementar un cliente que utilice la Calculadora via JRMI. Debe tener una inter
 	- operacion
 	- a (primer parámetro)
 	- b (segundo parámetro)
+
+---
+
+2.- Cifrar la comunicación entre cliente y servidor con SSL 1-way
+
+---
+
+3.- Cifrar la comunicación entre cliente y servidor con SSL 2-way
+
+Tips:
+	- El servidor tiene:
+		- Keystore
+		- Truststore
+	- El cliente tiene:
+		- Keystore
+		- Truststore
+	- El certificado digital del cliente debe estar en el trustore del servidor
+	- El certificado digital del servidor debe estar en el truststore del cliente
+	- Al ejecutar el Servidor deberé especificar keystore y truststore del servidor
+	- Al ejecutar el Cliente deberé especificar keystore y truststore del cliente
+
+
+
 
 

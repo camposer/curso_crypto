@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 /**
  * VM params:
- * -Djavax.net.ssl.trustStore=stores/truststore.ts -Djavax.net.ssl.trustStorePassword=123456
+ * -Djavax.net.ssl.trustStore=stores/truststore-cliente.ts -Djavax.net.ssl.trustStorePassword=123456
+ * -Djavax.net.ssl.keyStore=stores/keystore-cliente.jks -Djavax.net.ssl.keyStorePassword=123456 
  */
 public class CalculadoraClient {
 
