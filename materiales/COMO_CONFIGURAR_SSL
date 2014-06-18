@@ -8,9 +8,16 @@ COMO CONFIGURAR JRMI CON SSL 1-way
 
 2.- Extraer (exportar) el certificado del keystore
 	>  keytool -exportcert -keystore keystore.jks -alias mykey -file mykey.cer
+	
+	NOTA: Utilizando "keytool -list -v" observar los stores creados y sus características
 
 3.- Crear trustore a partir del certificado generado
 	> keytool -import -trustcacerts -alias mykey -file mykey.cer -keystore truststore.ts
 
+4.- Ejecutar clase servidor (CalculadoraSsl1wServer) con los siguientes VM arguments:
+-Djavax.net.ssl.trustStore=stores/truststore.ts -Djavax.net.ssl.trustStorePassword=123456 -Djavax.net.ssl.keyStore=stores/keystore.jks -Djavax.net.ssl.keyStorePassword=123456 
 
+5.- Ejecutar clase cliente con los siguientes VM arguments:
+-Djavax.net.ssl.trustStore=stores/truststore.ts -Djavax.net.ssl.trustStorePassword=123456
+	
 
