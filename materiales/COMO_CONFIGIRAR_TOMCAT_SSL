@@ -1,11 +1,3 @@
-http://192.168.96.127/pr/tools
-- apache-tomcat
-
-1. Descargar
-2. Descomprimir (recordar dónde!!!!)
-
-----
-
 COMO CONFIGURAR SSL EN TOMCAT
 =============================
 
@@ -24,7 +16,7 @@ NOTA: Si omite el keystoreFile utilizará por defecto ${user.home}/.keystore. Pu
 
 3.- Iniciar el tomcat. Debe ejecutar (doble-clic) el fichero: $TOMCAT_HOME/bin/startup.bat
 
-4.- Probar (mirar certificado). Abrir con el navegado: http://localhost:8443
+4.- Probar (mirar certificado). Abrir con el navegador: https://localhost:8443
 
 
 
