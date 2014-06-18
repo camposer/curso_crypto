@@ -1,0 +1,15 @@
+Implementar una calculadora de números decimales con JRMI. A continuación la definición de la interfaz remota:
+
+public interface Calculadora implements Remote {
+	public Float sumar(Float a, Float b) throws RemoteException;
+	public Float restar(Float a, Float b) throws RemoteException;
+	public Float dividir(Float a, Float b) throws RemoteException;
+	public Float multiplicar(Float a, Float b) throws RemoteException;
+}
+
+Implementar un cliente que utilice la Calculadora via JRMI. Debe tener una interfaz por consola que pida al usuario:
+	- operacion
+	- a (primer parámetro)
+	- b (segundo parámetro)
+
+
