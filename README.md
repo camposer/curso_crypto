@@ -57,14 +57,15 @@ Enlaces
 	http://docs.oracle.com/javase/8/docs/technotes/guides/security/certpath/CertPathProgGuide.html
 	
 - Control de Acceso
-	- Access Control Mechanisms and Algorithms
-	http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc4.html#a20389
-	http://stackoverflow.com/questions/8703234/accesscontroller-usage
-	- Security Management
-	http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc6.html#a19349
 	- Permissions and Security Policies
 	http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc3.html#a19802
-	- New Security Mechanisms in Sun's Java 2
+	- Security Manager
+	http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc6.html#a19349
+	http://www.javablogging.com/using-java-securitymanager-to-grantdeny-access-to-system-functions/
+		- Access Control Mechanisms and Algorithms
+	http://docs.oracle.com/javase/8/docs/technotes/guides/security/spec/security-spec.doc4.html#a20389
+	http://stackoverflow.com/questions/8703234/accesscontroller-usage
+- New Security Mechanisms in Sun's Java 2
 	http://www.securingjava.com/chapter-three/chapter-three-7.html
 
 - SSL y JRMIS
