@@ -29,12 +29,18 @@ public class TestPKC {
 		Cipher cipher = Cipher.getInstance("RSA");
 		cipher.init(Cipher.ENCRYPT_MODE, kpair.getPrivate());
 		
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();		
-		for (int i = 0; i < texto.length / NUM_BYTES_ENCRYPT; i++) {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		int length = (int)Math.ceil((double)texto.length / NUM_BYTES_ENCRYPT);
+		for (int i = 0; i < length; i++) {
+			int numBytesEncrypt = NUM_BYTES_ENCRYPT;
+
+			if (texto.length < NUM_BYTES_ENCRYPT)
+				numBytesEncrypt = texto.length;
+			
 			byte[] cifrado = cipher.doFinal(
 				texto, 
 				NUM_BYTES_ENCRYPT * i, 
-				NUM_BYTES_ENCRYPT);
+				numBytesEncrypt);
 			
 			baos.write(cifrado);
 		}
@@ -53,11 +59,17 @@ public class TestPKC {
 		// 3.- Descifrando
 		cipher.init(Cipher.DECRYPT_MODE, kpair.getPublic());
 		baos = new ByteArrayOutputStream();
-		for (int i = 0; i < textoCifrado.length / NUM_BYTES_DECRYPT; i++) {
+		length = (int)Math.ceil((double)textoCifrado.length / NUM_BYTES_DECRYPT);
+		for (int i = 0; i < length; i++) {
+			int numBytesDecrypt = NUM_BYTES_DECRYPT;
+
+			if (texto.length < NUM_BYTES_ENCRYPT)
+				numBytesDecrypt = textoCifrado.length;
+
 			byte[] descifrado = cipher.doFinal(
 				textoCifrado, 
 				NUM_BYTES_DECRYPT * i, 
-				NUM_BYTES_DECRYPT);
+				numBytesDecrypt);
 			
 			baos.write(descifrado);
 		}
@@ -74,8 +86,3 @@ public class TestPKC {
 		
 	}
 }
-
-
-
-
-
